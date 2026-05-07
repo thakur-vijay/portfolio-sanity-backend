@@ -19,16 +19,19 @@ export default {
           type: 'string',
         },
         {
-          name: 'title',
-          title: 'Title',
+          name: 'title1',
+          title: 'Title 1',
           type: 'string',
-          validation: (Rule) => Rule.required(),
+        },
+        {
+          name: 'title2',
+          title: 'Title 2',
+          type: 'string',
         },
         {
           name: 'subtitle',
           title: 'Subtitle',
           type: 'text',
-          validation: (Rule) => Rule.required(),
         },
       ],
     },
@@ -52,28 +55,6 @@ export default {
           title: 'Role Tags',
           type: 'array',
           of: [{type: 'string'}],
-        },
-      ],
-    },
-    {
-      name: 'projectsSection',
-      title: 'Projects Section',
-      type: 'object',
-      fields: [
-        {
-          name: 'title',
-          title: 'Title',
-          type: 'string',
-        },
-        {
-          name: 'subtitle',
-          title: 'SubTitle',
-          type: 'string',
-        },
-        {
-          name: 'description',
-          title: 'Description',
-          type: 'text',
         },
       ],
     },
@@ -114,7 +95,8 @@ export default {
                   name: 'svgCode',
                   title: 'SVG Code',
                   type: 'text',
-                  description: 'Paste raw SVG code here.',
+                  description:
+                    'Paste raw SVG code from Lucide Icons. Visit https://lucide.dev/icons/, open any icon, copy the full SVG code, and paste it here.',
                 },
               ],
               preview: {
@@ -163,23 +145,6 @@ export default {
               ],
             },
           ],
-        },
-      ],
-    },
-    {
-      name: 'experienceSection',
-      title: 'Experience Section',
-      type: 'object',
-      fields: [
-        {
-          name: 'title',
-          title: 'Title',
-          type: 'string',
-        },
-        {
-          name: 'subTitle',
-          title: 'Sub Title',
-          type: 'string',
         },
       ],
     },
