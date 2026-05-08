@@ -98,12 +98,7 @@ export default {
                   description:
                     'Paste raw SVG code from Lucide Icons. Visit https://lucide.dev/icons/, open any icon, copy the full SVG code, and paste it here.',
                 },
-              ],
-              preview: {
-                select: {
-                  title: 'name',
-                },
-              },
+              ]
             },
           ],
         },

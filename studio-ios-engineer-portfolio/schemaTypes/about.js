@@ -2,73 +2,128 @@ export default {
   name: 'about',
   title: 'About',
   type: 'document',
-
   fields: [
     {
-      name: 'name',
-      title: 'Name',
-      type: 'string',
-      description: 'Example: © 2026 Vijay Thakur. All rights reserved.',
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: 'socialLinks',
-      title: 'Social Links',
+      name: 'aboutSection',
+      title: 'About Section',
       type: 'object',
-
       fields: [
         {
-          name: 'github',
-          title: 'GitHub URL',
-          type: 'url',
-          description: 'Example: https://github.com/yourusername',
-          validation: (Rule) =>
-            Rule.required().uri({
-              scheme: ['http', 'https'],
-            }),
+          name: 'title',
+          title: 'Title',
+          type: 'string',
         },
-
         {
-          name: 'linkedin',
-          title: 'LinkedIn URL',
-          type: 'url',
-          description: 'Example: https://linkedin.com/in/yourusername',
-          validation: (Rule) =>
-            Rule.required().uri({
-              scheme: ['http', 'https'],
-            }),
+          name: 'subtitle',
+          title: 'Subtitle',
+          type: 'string',
         },
-
         {
-          name: 'twitter',
-          title: 'Twitter / X URL',
-          type: 'url',
-          description: 'Optional',
-          validation: (Rule) =>
-            Rule.uri({
-              scheme: ['http', 'https'],
-            }),
-        },
-
-        {
-          name: 'mail',
-          title: 'Mail URL',
-          type: 'url',
-          description: 'Example: mailto:hello@example.com',
-          validation: (Rule) =>
-            Rule.required().uri({
-              scheme: ['mailto'],
-            }),
+          name: 'about',
+          title: 'About',
+          type: 'array',
+          of: [
+            {
+              type: 'block',
+              styles: [
+                {title: 'Normal', value: 'normal'},
+                {title: 'Heading', value: 'h2'},
+                {title: 'Quote', value: 'blockquote'},
+              ],
+              lists: [
+                {title: 'Bullet', value: 'bullet'},
+                {title: 'Number', value: 'number'},
+              ],
+              marks: {
+                decorators: [
+                  {title: 'Strong', value: 'strong'},
+                  {title: 'Emphasis', value: 'em'},
+                ],
+                annotations: [
+                  {
+                    name: 'link',
+                    title: 'Link',
+                    type: 'object',
+                    fields: [
+                      {
+                        name: 'href',
+                        title: 'URL',
+                        type: 'url',
+                      },
+                    ],
+                  },
+                ],
+              },
+            },
+          ],
         },
       ],
     },
-  ],
-
-  preview: {
-    prepare() {
-      return {
-        title: 'About',
-      }
+    {
+      name: 'principleSection',
+      title: 'Principle Section',
+      type: 'object',
+      fields: [
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+        },
+        {
+          name: 'subtitle',
+          title: 'Subtitle',
+          type: 'string',
+        },
+        {
+          name: 'principles',
+          title: 'Principles',
+          type: 'array',
+          of: [
+            {
+              type: 'object',
+              fields: [
+                {
+                  name: 'title',
+                  title: 'Title',
+                  type: 'string',
+                },
+                {
+                  name: 'description',
+                  title: 'Description',
+                  type: 'text',
+                },
+              ]
+            },
+          ],
+        },
+      ],
     },
-  },
+    {
+      name: 'beyondCodeSection',
+      title: 'Beyond Code Section',
+      type: 'object',
+      fields: [
+        {
+          name: 'subtitle',
+          title: 'Subtitle',
+          type: 'string',
+        },
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+        },
+        {
+          name: 'description',
+          title: 'Description',
+          type: 'text',
+        },
+      ],
+    },
+    {
+      name: 'collaborationMessage',
+      title: 'Collaboration Message',
+      type: 'string',
+    },
+  ],
 }

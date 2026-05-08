@@ -20,12 +20,4 @@ export default {
       validation: (Rule) => Rule.required(),
     },
   ],
-
-  preview: {
-    prepare() {
-      return {
-        title: 'Footer',
-      }
-    },
-  },
 }
