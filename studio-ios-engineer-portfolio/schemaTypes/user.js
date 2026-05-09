@@ -11,6 +11,12 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'location',
+      title: 'Location',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    },
+    {
       name: 'socialLinks',
       title: 'Social Links',
       type: 'object',
@@ -48,17 +54,13 @@ export default {
               scheme: ['http', 'https'],
             }),
         },
-
         {
           name: 'mail',
-          title: 'Mail URL',
-          type: 'url',
-          description: 'Example: mailto:hello@example.com',
-          default: 'mailto:',
+          title: 'E-mail',
+          type: 'string',
+          description: 'Example: hello@example.com',
           validation: (Rule) =>
-            Rule.required().uri({
-              scheme: ['mailto'],
-            }),
+            Rule.required(),
         },
       ],
     },

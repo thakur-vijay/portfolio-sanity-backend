@@ -144,6 +144,45 @@ export default {
       ],
     },
     {
+      name: 'experienceSection',
+      title: 'Experience Section',
+      type: 'object',
+      fields: [
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+        },
+        {
+          name: 'subTitle',
+          title: 'Sub Title',
+          type: 'string',
+        },
+      ],
+    },
+    {
+      name: 'workSection',
+      title: 'Work Section',
+      type: 'object',
+      fields: [
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+        },
+        {
+          name: 'subTitle',
+          title: 'Sub Title',
+          type: 'string',
+        },
+        {
+          name: 'description',
+          title: 'Description',
+          type: 'text'
+        }
+      ],
+    },
+    {
       name: 'ctaSection',
       title: 'CTA Section',
       type: 'object',
